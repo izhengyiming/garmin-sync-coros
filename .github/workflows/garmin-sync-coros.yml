@@ -3,7 +3,10 @@ name: garmin-sync-coros
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 1,8,21 * * ?'
+    # 北京时间20:00~22:50 每30分钟同步
+    - cron: '\*/30 12,13,14 \* \* \*'
+    # 其余所有时段 每4小时整点同步
+    - cron: '0 \*/4 \* \* \*'
 env:
   GITHUB_NAME: petrel1121
   GITHUB_EMAIL: 23305244@qq.com
