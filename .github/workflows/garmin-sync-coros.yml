@@ -3,7 +3,8 @@ name: garmin-sync-coros
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 1,8,21 * * ?'
+    - cron: '*/30 12,13,14 * * *'
+    - cron: '0 */4 * * *'
 env:
   GITHUB_NAME: petrel1121
   GITHUB_EMAIL: 23305244@qq.com
